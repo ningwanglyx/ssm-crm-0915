@@ -23,6 +23,10 @@
     <!-- 2. 开启SpringMVC注解模式-->
     <!--自动注册DefaultAnnotationHandlerMapping和AnnotaionMethodHandlerAdapter-->
     <mvc:annotation-driven/>
+    <!-- 对静态资源放行 注意：location为/WEB-INF/**/-->
+    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"></mvc:resources>
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"></mvc:resources>
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"></mvc:resources>
 
     <!-- 3. 配置视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,7 +35,9 @@
     </bean>
 
     <!--4. 静态资源默认servlet配置:(1)加入对静态资源的处理，js，gif， png；（2）允许使用“/”做整体映射-->
-    <mvc:default-servlet-handler />
+    <!--<mvc:default-servlet-handler />-->
+
+    <!-- 配置视图解析器 -->
 
     <!-- 配置Conveter转换器，转换工厂（日期、去掉前后空格） -->
     <!-- 配置拦截器 mvc:interceptors -->

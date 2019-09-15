@@ -39,7 +39,8 @@
         <!--扫描pojo包，使用别名-->
         <property name="typeAliasesPackage" value="com.ke.pojo"></property>
         <!--扫描sql配置文件：mapper需要的xml文件-->
-        <property name="mapperLocations" value="classpath:mapper/PeopleMapper.xml"></property>
+        <property name="mapperLocations" value="classpath:mapper/**.xml"></property>
+
     </bean>
 
     <!-- 4. 配置mapper接口扫描包，动态实现mapper接口，注入到spring容器中 -->
