@@ -47,4 +47,12 @@ public interface CustomerMapper {
      * @return: void
      **/
     void updateCustomerById(Customer customer);
+    /**
+     * @Author: YangxingLiu
+     * @Description: 根据id删除用户
+     * @Date: Created in 20:35 2019/9/16
+     * @Param id:
+     * @return: void
+     **/
+    void deleteCustomerById(Long id);
 }

@@ -67,6 +67,7 @@ public class CustomerController {
         model.addAttribute("custLevel", queryVo.getCustLevel());
         return "customer";
     }
+
     @RequestMapping("edit")
     @ResponseBody
     /**
@@ -91,6 +92,13 @@ public class CustomerController {
     @ResponseBody
     public String updateCustomerById(Customer customer){
         this.customerService.updateCustomerById(customer);
+        return "OK";
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public String deleteCustomerById(Long id){
+        this.customerService.deleteCustomerById(id);
         return "OK";
     }
 }

@@ -99,4 +99,10 @@
         WHERE
         (`cust_id` = #{cust_id});
     </update>
+
+    <!-- 根据id删除用户-->
+    <delete id="deleteCustomerById" parameterType="long">
+        delete from customer
+        where cust_id = #{cust_id}
+    </delete>
 </mapper>

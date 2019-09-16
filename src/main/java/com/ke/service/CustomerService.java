@@ -36,4 +36,6 @@ public interface CustomerService {
      * @return: void
      **/
     void updateCustomerById(Customer customer);
+
+    void deleteCustomerById(Long id);
 }

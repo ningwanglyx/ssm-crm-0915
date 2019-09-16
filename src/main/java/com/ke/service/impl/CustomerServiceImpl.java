@@ -42,4 +42,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void updateCustomerById(Customer customer) {
         this.customerMapper.updateCustomerById(customer);
     }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        this.customerMapper.deleteCustomerById(id);
+    }
 }
