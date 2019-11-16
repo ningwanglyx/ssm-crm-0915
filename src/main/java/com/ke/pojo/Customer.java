@@ -103,6 +103,7 @@ public class Customer {
         this.cust_mobile = cust_mobile;
     }
 
+
     public String getCust_zipcode() {
         return cust_zipcode;
     }
